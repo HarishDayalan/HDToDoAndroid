@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">To-Do App</string>
+    <string name="action_settings">Settings</string>
+    <string name="etLabel">Enter ToDo</string>
+    <string name="btAddItem">Add Item</string>
+    <string name="etItemEditView" />
+    <string name="btSave">Save</string>
+</resources>
