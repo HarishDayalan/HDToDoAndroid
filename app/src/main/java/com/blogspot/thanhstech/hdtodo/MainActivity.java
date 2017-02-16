@@ -106,8 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                        items.remove(position);
-//                        itemsAdapter.notifyDataSetChanged();
+//
                         Intent intent = new Intent(MainActivity.this, EditItemActivity.class);
                         String value = items.get(position);
                         intent.putExtra("editValue", value);
