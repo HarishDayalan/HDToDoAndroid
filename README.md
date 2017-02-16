@@ -11,6 +11,9 @@ This application has the below features
    <li>Delete to-do items (long click)</li>
 </ul> 
 </p>
+<p>
+Below is sample working application
+</p>
 <p align="center">
   <img src="ToDo.gif" width="350"/>
 </p>
