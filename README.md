@@ -41,7 +41,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Harish Kumar Dayalan]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -55,24 +55,3 @@ Describe any challenges encountered while building the app.
     See the License for the specific language governing permissions and
     limitations under the License.
 
-
-
-# HDToDoAndroid
-To Do List android application
-
-<p>
-This application has the below features
-</p>
-<p>
-<ul>
-   <li>Add to-do items</li>
-  <li>Edit to-do items (single click)</li>
-   <li>Delete to-do items (long click)</li>
-</ul> 
-</p>
-<p>
-Below is sample working application
-</p>
-<p align="center">
-  <img src="ToDo.gif" width="350"/>
-</p>
