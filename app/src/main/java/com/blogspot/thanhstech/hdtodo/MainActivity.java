@@ -20,7 +20,10 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+                sendEmail();
             }
         });
 
@@ -160,5 +164,34 @@ public class MainActivity extends AppCompatActivity {
 
             exception.printStackTrace();
         }
+    }
+
+    private void sendEmail() {
+
+        final Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+        emailIntent.setType("plain/text");
+        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{""});
+
+        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "To-Do List - " + new Date());
+        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, generateList(items) );
+        this.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+    }
+
+    private String generateList(ArrayList<String> list) {
+
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("Below is the list of to-do's");
+        buffer.append(System.lineSeparator());
+        buffer.append(System.lineSeparator());
+        for(String val : list) {
+
+            buffer.append(val);
+            buffer.append(System.lineSeparator());
+        }
+        buffer.append(System.lineSeparator());
+        buffer.append("Regards,");
+        buffer.append(System.lineSeparator());
+        buffer.append("To-Do App Team.");
+        return buffer.toString();
     }
 }
