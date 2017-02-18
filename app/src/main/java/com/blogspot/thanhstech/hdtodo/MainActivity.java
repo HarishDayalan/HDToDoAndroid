@@ -131,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
         String updatedValue = data.getExtras().getString("updatedValue");
         items.set(data.getExtras().getInt("updatedPos"), updatedValue);
         itemsAdapter.notifyDataSetChanged();
+        writeItems();
     }
 
     private void writeItems() {
